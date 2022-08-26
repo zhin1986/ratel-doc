@@ -53,7 +53,7 @@
               harborConfig: "HarborUrl, HarborUsername, HarborPassword, HarborEmail"
 
     之后热更新原有的Secret:
-        kubectl create secret generic  ratel-config --from-file=servers.yaml --from-file=test1.config --from-file=test2.config --from-file=test3.config -n kube-system --dr-run -o yaml | kubectl replace -f -
+        kubectl create secret generic  ratel-config --from-file=servers.yaml --from-file=test1.config --from-file=test2.config --from-file=test3.config -n kube-system --dry-run -o yaml | kubectl replace -f -
     
     也可以使用Ratel直接编辑该Secret
 
